@@ -1,0 +1,21 @@
+[package]
+name = "solang-server"
+version = "0.1.0"
+authors = ["Shivam Balikondwar <shivambalikondwar@icloud.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0"
+serde_json = "1.0"
+solang = { git= "https://github.com/hyperledger-labs/solang", rev="2e2c199945a2a50a1b5c64e983ec3f4f08ba232b" }
+tower-lsp = { git= "https://github.com/ebkalderon/tower-lsp" }
+tokio = { version = "0.2", features = ["rt-core"] }
+tokio-util = { version = "0.3", features = ["codec"] }
+tower-service = "0.3"
+env_logger = "0.7"
+
+[dev-dependencies]
+env_logger = "0.7"
+tokio = { version = "0.2", features = ["io-std", "macros", "test-util"] }
